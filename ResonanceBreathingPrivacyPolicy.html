@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resonance Breathing Privacy Policy</title>
+    <!--
+      Upload alongside PectoPrivacyPolicy.html at the root of thinkai.fi, so
+      the URL becomes:
+
+          https://thinkai.fi/ResonanceBreathingPrivacyPolicy.html
+
+      Self-contained on purpose — same shape as the Pecto page: one file, inline
+      styles, no build step and nothing to fetch.
+
+      The source of truth is docs/store/privacy-policy.md in the app repository.
+      Edit there first, then regenerate this.
+    -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        /* Pecto's page runs full width; long lines are hard to read on a
+           desktop, so this one is capped and centred. Everything else matches. */
+        main {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p, li {
+            margin: 10px 0;
+        }
+        strong {
+            color: #000;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 16px 0;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #ececec;
+        }
+        code {
+            background-color: #e8e8e8;
+            padding: 1px 4px;
+            border-radius: 3px;
+        }
+        footer {
+            margin-top: 32px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<main>
+
+    <h1>Privacy Policy for Resonance Breathing</h1>
+    <p><strong>Last updated:</strong> 8 August 2026</p>
+
+    <p>Resonance Breathing is made by ThinkAI Oy (Finland).</p>
+
+    <h2>The short version</h2>
+
+    <p><strong>The app collects nothing, sends nothing, and needs no
+    account.</strong></p>
+
+    <p>That is not a promise we ask you to take on trust. The released Android
+    build does not declare the <code>INTERNET</code> permission at all, so it
+    cannot open a network connection even if it tried. The iOS build declares no
+    permission usage descriptions, because it asks for none.</p>
+
+    <h2>What is stored, and where</h2>
+
+    <p>Everything the app remembers stays in its own storage on your device:</p>
+
+    <table>
+        <tr><th>What</th><th>Where</th></tr>
+        <tr>
+            <td>Your pace, session length, sound and haptics settings,
+                appearance</td>
+            <td>App preferences on the device</td>
+        </tr>
+        <tr>
+            <td>Your practice history — start time, duration, pace, breath
+                count, whether the session finished</td>
+            <td>A local database inside the app</td>
+        </tr>
+    </table>
+
+    <p>None of it leaves the device. We cannot see it, and neither can anyone
+    else. Deleting the app deletes all of it. You can also clear your practice
+    history at any time from <strong>Settings → Practice history</strong>.</p>
+
+    <h2>What we do not do</h2>
+
+    <ul>
+        <li>No accounts, no sign-in, no email address.</li>
+        <li>No analytics, telemetry, crash reporting or usage measurement of any
+            kind.</li>
+        <li>No advertising, and no advertising identifiers.</li>
+        <li>No third-party SDKs that collect data.</li>
+        <li>No cookies, no tracking, no profiling, no selling or sharing of data
+            — because there is no data to sell or share.</li>
+    </ul>
+
+    <h2>Permissions</h2>
+
+    <p><strong>iOS</strong> requests no permissions.</p>
+
+    <p><strong>Android</strong> declares three, and only these:</p>
+
+    <ul>
+        <li><code>FOREGROUND_SERVICE</code> and
+            <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code> — so that the guiding
+            sound keeps playing when your screen turns off during a session.
+            Android suspends a backgrounded app's audio otherwise.</li>
+        <li><code>POST_NOTIFICATIONS</code> — so the ongoing "session in
+            progress" notification is visible while that service runs. The
+            session works whether or not you grant it; declining only hides the
+            notification.</li>
+    </ul>
+
+    <h2>Links out of the app</h2>
+
+    <p>Three places open your browser: the research links on the
+    <strong>Research &amp; sources</strong> screen, and the link to our other app
+    on the <strong>About</strong> and session-completion screens.</p>
+
+    <p>Following a link takes you to a website we do not control, and that site's
+    own privacy policy applies once you are there. The link to pecto.ai carries a
+    plain tag identifying that you came from this app, so we can tell the two
+    apps' visitors apart. It contains nothing about you, and nothing is sent
+    unless you choose to tap the link.</p>
+
+    <h2>Health and medical data</h2>
+
+    <p>The app guides breathing. It does not measure anything about your body,
+    does not read Apple Health or Google Fit, and has no access to heart rate or
+    any other health data.</p>
+
+    <p>It is for wellbeing and relaxation. It is not a medical device and not a
+    substitute for medical care.</p>
+
+    <h2>Children</h2>
+
+    <p>The app is not directed at children and collects no data from anyone,
+    including children.</p>
+
+    <h2>Changes to this policy</h2>
+
+    <p>If this policy changes, the date at the top changes with it, and the
+    current version is always at this address. Since the app collects nothing, we
+    do not expect substantive changes — but a new feature that touched data would
+    be described here before it shipped.</p>
+
+    <h2>Contact</h2>
+
+    <p>Questions about privacy, or about this policy:
+    <a href="mailto:info@thinkai.fi">info@thinkai.fi</a></p>
+
+    <footer>
+        <p>ThinkAI Oy, Finland</p>
+    </footer>
+
+</main>
+</body>
+</html>
