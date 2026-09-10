@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resonance Breath — Guided Resonance-Frequency Breathing</title>
+    <meta name="description"
+          content="Breathing at your resonance pace raises HRV — one of the clearest signs of a nervous system that copes well with stress. Ten minutes a day, offline, no account.">
+    <meta property="og:url" content="https://thinkai.fi/resonance.html">
+    <meta property="og:title" content="Resonance Breath — Guided Resonance-Frequency Breathing">
+    <meta property="og:description"
+          content="Breathing at your resonance pace raises HRV — one of the clearest signs of a nervous system that copes well with stress. Ten minutes a day, offline, no account.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://thinkai.fi/images/resonance/icon-512.png">
+    <link rel="canonical" href="https://thinkai.fi/resonance.html">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/resonance/icon-512.png">
+    <!--
+      Marketing landing page for the Resonance Breath app (fi.thinkai.apps.resonance,
+      App Store id 6799437434). Lives alongside ResonanceBreathingPrivacyPolicy.html
+      at the root of thinkai.fi, so the URL is https://thinkai.fi/resonance.html —
+      this is the app's "Support URL" / "Marketing URL" in both store listings.
+
+      Self-contained on purpose, same shape as the other pages here: one file,
+      inline styles, no build step, nothing fetched from a CDN.
+
+      Copy is pulled from docs/store/listing-en.md in the app's own repository
+      (meditationApp), which is the vetted source of truth for what claims this
+      app is allowed to make — see the claims table in that repo's CLAUDE.md.
+      Edit there first if the claims change, then update this page to match.
+
+      Images in images/resonance/ are downsized copies of the app icon and the
+      committed App Store screenshots (docs/store/screenshots/6.9-inch/ in the
+      app repo) — resized to web sizes with `sips`, not the submission originals.
+    -->
+    <style>
+        :root {
+            --bg: #05060b;
+            --bg-raised: #0c0e18;
+            --text: #e4e5ee;
+            --muted: #9296ab;
+            --border: #1d2033;
+            --accent: #5b6fd6;
+            --accent-soft: #2a3068;
+            --sun-1: #ffe9c2;
+            --sun-2: #e8a24a;
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+        a { color: inherit; }
+        .wrap {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        header.top {
+            padding: 20px 0;
+        }
+        header.top .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header.top a.brand {
+            text-decoration: none;
+            color: var(--muted);
+            font-size: 14px;
+            letter-spacing: 0.02em;
+        }
+        header.top a.brand:hover { color: var(--text); }
+
+        .hero {
+            padding: 40px 0 56px;
+            text-align: center;
+            background:
+                radial-gradient(circle at 50% 230px, rgba(255,233,194,0.5) 0%, rgba(232,162,74,0.32) 22%, rgba(232,162,74,0) 60%);
+            background-repeat: no-repeat;
+        }
+        .hero .subtitle, .hero .promo { text-shadow: 0 2px 16px rgba(0,0,0,0.6); }
+        .icon {
+            width: 84px;
+            height: 84px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+        }
+        .hero h1 {
+            font-size: 2.1rem;
+            margin: 20px 0 4px;
+        }
+        .hero .subtitle {
+            color: var(--muted);
+            font-size: 1.15rem;
+            margin: 0 0 18px;
+        }
+        .hero .promo {
+            max-width: 560px;
+            margin: 0 auto 28px;
+            color: #c7c9d8;
+        }
+        .stores {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
+        .store-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #101223;
+            border: 1px solid var(--border);
+            color: var(--text);
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 12px;
+            transition: border-color 0.15s, transform 0.15s;
+        }
+        .store-btn:hover {
+            border-color: var(--accent);
+            transform: translateY(-1px);
+        }
+        .store-btn svg { flex: none; }
+        .store-btn .lines { text-align: left; line-height: 1.2; }
+        .store-btn .lines .small { display: block; font-size: 11px; color: var(--muted); }
+        .store-btn .lines .big { display: block; font-size: 15px; font-weight: 600; }
+
+        .hero-shot {
+            width: 220px;
+            border-radius: 22px;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+        }
+
+        section {
+            padding: 48px 0;
+            border-top: 1px solid var(--border);
+        }
+        section h2 {
+            font-size: 1.4rem;
+            margin: 0 0 14px;
+        }
+        section p {
+            color: #c7c9d8;
+        }
+        section p.lead {
+            font-size: 1.05rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .features li {
+            display: flex;
+            gap: 12px;
+            color: #c7c9d8;
+        }
+        .features li::before {
+            content: "";
+            flex: none;
+            width: 8px;
+            height: 8px;
+            margin-top: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .shots {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding: 6px 0 10px;
+            margin-top: 24px;
+            -webkit-overflow-scrolling: touch;
+        }
+        .shots img {
+            height: 340px;
+            width: auto;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            flex: none;
+        }
+
+        .privacy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 10px 28px;
+            padding: 0;
+            margin: 0 0 18px;
+            list-style: none;
+        }
+        .privacy-grid li {
+            color: #c7c9d8;
+            display: flex;
+            gap: 8px;
+        }
+        .privacy-grid li::before {
+            content: "✓";
+            color: var(--accent);
+            flex: none;
+        }
+
+        .caution {
+            background: var(--bg-raised);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px 20px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+        .caution strong { color: var(--text); }
+
+        footer.bottom {
+            padding: 36px 0 48px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+        footer.bottom a { color: #b9bdd6; text-decoration: underline; }
+        footer.bottom .links {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        @media (min-width: 700px) {
+            .hero {
+                background:
+                    radial-gradient(circle at 78% 45%, rgba(255,233,194,0.5) 0%, rgba(232,162,74,0.32) 22%, rgba(232,162,74,0) 55%);
+            }
+            .hero .wrap { display: flex; align-items: center; text-align: left; gap: 48px; }
+            .hero-col { flex: 1; }
+            .hero h1 { font-size: 2.6rem; }
+            .hero .subtitle { font-size: 1.25rem; }
+            .hero .promo { margin: 0 0 28px; }
+            .stores { justify-content: flex-start; }
+            .icon { margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="top">
+    <div class="wrap">
+        <a class="brand" href="index.html">← ThinkAI Oy</a>
+        <a class="brand" href="https://pecto.ai" target="_blank" rel="noopener noreferrer">Also by us: Pecto →</a>
+    </div>
+</header>
+
+<section class="hero" style="border-top:none; padding-top:0;">
+    <div class="wrap">
+        <div class="hero-col">
+            <img class="icon" src="images/resonance/icon-512.png" alt="Resonance Breath app icon">
+            <h1>Resonance Breath</h1>
+            <p class="subtitle">Guided slow breathing for calm</p>
+            <p class="promo">Breathing at your resonance pace raises HRV — one of the clearest signs of a nervous
+                system that copes well with stress. Ten minutes a day, offline, no account.</p>
+            <div class="stores">
+                <a class="store-btn" href="https://apps.apple.com/app/id6799437434" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16.365 1.43c0 1.14-.462 2.234-1.21 3.03-.83.887-2.19 1.573-3.29 1.484-.14-1.104.44-2.264 1.2-3.03.84-.86 2.26-1.5 3.3-1.484zM20.6 17.13c-.5 1.15-.74 1.66-1.38 2.68-.9 1.42-2.16 3.19-3.73 3.2-1.4.02-1.76-.91-3.66-.9-1.9.01-2.3.92-3.7.9-1.57-.02-2.76-1.61-3.66-3.03C1.9 16.9.98 13.1 2.36 10.53c.95-1.77 2.63-2.9 4.44-2.92 1.42-.03 2.76.96 3.63.96.86 0 2.5-1.19 4.2-1.02.72.03 2.73.29 4.02 2.2-.1.07-2.4 1.4-2.37 4.17.03 3.3 2.9 4.4 2.93 4.41-.03.09-.46 1.57-1.6 3.24z"/></svg>
+                    <span class="lines"><span class="small">Download on the</span><span class="big">App Store</span></span>
+                </a>
+                <a class="store-btn" href="https://play.google.com/store/apps/details?id=fi.thinkai.apps.resonance" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+                    <svg width="22" height="22" viewBox="0 0 24 24"><path fill="#00d2ff" d="M3.6 2.4c-.3.3-.5.8-.5 1.4v16.4c0 .6.2 1.1.5 1.4l.1.1L13 12.3v-.2L3.7 2.3l-.1.1z"/><path fill="#00f076" d="M16.1 15.4l-3.1-3.1v-.2l3.1-3.1 3.5 2c1 .6 1 1.5 0 2.1l-3.5 2z"/><path fill="#ff3a44" d="M16.1 15.4L13 12.3 3.6 21.7c.35.37.94.42 1.6.05l10.9-6.35z"/><path fill="#ffcf00" d="M16.1 8.6L5.2 2.25c-.66-.37-1.25-.32-1.6.05L13 12.3l3.1-3.7z"/></svg>
+                    <span class="lines"><span class="small">GET IT ON</span><span class="big">Google Play</span></span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-col" style="text-align:center;">
+            <img class="hero-shot" src="images/resonance/01-home.jpg" alt="Resonance Breath home screen: a breathing sun and a 10 minute session at 5.5 breaths per minute">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="wrap">
+        <p class="lead">Open the app, tap once, and breathe. A sun grows as you breathe in and shrinks as you breathe
+            out, while a soft tone rises and falls on exactly the same clock. Match your breath to the sun. That is
+            the whole app.</p>
+    </div>
+</section>
+
+<section>
+    <div class="wrap">
+        <h2>Why this pace</h2>
+        <p>Your heart speeds up a little as you breathe in and slows as you breathe out. Breathing slowly — about
+            five to six breaths a minute — makes that rise and fall as large and smooth as it can be.</p>
+        <p>That swing is your heart rate variability, or HRV. A higher, steadier HRV is one of the clearest signs of
+            a nervous system that copes well with stress, and this pace of breathing — studied as resonance-frequency
+            breathing, or HRV biofeedback — is one of the most reliable ways to raise it.</p>
+        <p>Ten minutes a day for five to six weeks lifts your resting HRV. In studies, breathing like this has
+            helped people feel calmer, sleep better, and stay steadier under pressure. The app links to the research
+            it's built on, so you can read it yourself.</p>
+        <div class="shots">
+            <img src="images/resonance/04-research.jpg" alt="Research and sources screen listing the HRV biofeedback studies the app is built on">
+            <img src="images/resonance/02-session-inhale.jpg" alt="A breathing session mid-inhale, the sun grown large">
+            <img src="images/resonance/05-settings.jpg" alt="Settings screen: pace, session length, sound and appearance">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="wrap">
+        <h2>What it does</h2>
+        <ul class="features">
+            <li>A sun that breathes, drawn to be watched in a dark room without glare</li>
+            <li>A tone that swells and eases on the same clock as the sun — never out of step</li>
+            <li>A soft tap at the turn of each breath, so you can practise with your eyes closed</li>
+            <li>Your own pace, from 4.5 to 7 breaths per minute — the ideal one is personal</li>
+            <li>Sessions of 3, 5, 10 or 15 minutes</li>
+            <li>Keeps playing with the screen off</li>
+            <li>A quiet record of your practice, kept on your device</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="wrap">
+        <h2>What it doesn't do</h2>
+        <ul class="privacy-grid">
+            <li>No account, no sign-up</li>
+            <li>No email address</li>
+            <li>No subscription</li>
+            <li>No advertising</li>
+            <li>No analytics of any kind</li>
+            <li>No internet — the app doesn't even ask for the permission</li>
+        </ul>
+        <p>Your settings and your practice history never leave your phone. Details in the
+            <a href="ResonanceBreathingPrivacyPolicy.html">privacy policy</a>.</p>
+    </div>
+</section>
+
+<section>
+    <div class="wrap">
+        <div class="caution">
+            <p style="margin:0 0 10px;"><strong>Breathe gently.</strong> This is about rhythm, not big breaths. Keep
+                it light and shallow. If you ever feel lightheaded, breathe normally for a moment.</p>
+            <p style="margin:0;">Resonance Breath is for wellbeing and relaxation. It is not a medical device and
+                not a substitute for medical care.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="bottom">
+    <div class="wrap">
+        <p>Made by ThinkAI Oy — the same team behind <a href="https://pecto.ai" target="_blank" rel="noopener noreferrer">Pecto</a>,
+            a Finnish-learning app for busy people. Made for ourselves, our families, and everyone who wants a
+            little more calm in their day.</p>
+        <div class="links">
+            <a href="ResonanceBreathingPrivacyPolicy.html">Privacy policy</a>
+            <a href="mailto:info@thinkai.fi">info@thinkai.fi</a>
+            <a href="index.html">thinkai.fi</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
